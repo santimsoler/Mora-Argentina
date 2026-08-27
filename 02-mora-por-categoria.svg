@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 482" font-family="Helvetica, Arial, sans-serif">
+<rect width="760" height="482" fill="#FFFFFF"/>
+<text x="0" y="22" font-size="17" font-weight="700" fill="#0B2239">Tasa de mora por tipo de prestamista</text>
+<text x="0" y="42" font-size="11.5" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">Solo personas humanas · monto irregular sobre monto prestado · junio 2026</text>
+<line x1="0" y1="60" x2="0" y2="410" stroke="#C7D2DA" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="0" y="428" font-size="10" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" text-anchor="middle">0%</text>
+<line x1="120" y1="60" x2="120" y2="410" stroke="#C7D2DA" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="120" y="428" font-size="10" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" text-anchor="middle">10%</text>
+<line x1="240" y1="60" x2="240" y2="410" stroke="#C7D2DA" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="240" y="428" font-size="10" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" text-anchor="middle">20%</text>
+<line x1="360" y1="60" x2="360" y2="410" stroke="#C7D2DA" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="360" y="428" font-size="10" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" text-anchor="middle">30%</text>
+<line x1="480" y1="60" x2="480" y2="410" stroke="#C7D2DA" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="480" y="428" font-size="10" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" text-anchor="middle">40%</text>
+<line x1="600" y1="60" x2="600" y2="410" stroke="#C7D2DA" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="600" y="428" font-size="10" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" text-anchor="middle">50%</text>
+<text x="0" y="68" font-size="12.5" font-weight="500" fill="#0B2239">Vendedores de Electrodomésticos y Retail</text>
+<rect x="0" y="74" width="517.0" height="16" fill="#A33B22"/>
+<text x="525,0" y="87" font-size="12" font-weight="600" fill="#A33B22" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">43,1%</text>
+<text x="0" y="112" font-size="12.5" font-weight="500" fill="#0B2239">Empresas Crédito Rápido Alto Riesgo</text>
+<rect x="0" y="118" width="483.5" height="16" fill="#A33B22"/>
+<text x="491,5" y="131" font-size="12" font-weight="600" fill="#A33B22" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">40,3%</text>
+<text x="0" y="156" font-size="12.5" font-weight="500" fill="#0B2239">Tarjetas de Crédito No Bancarias</text>
+<rect x="0" y="162" width="305.6" height="16" fill="#B07C1E"/>
+<text x="313,6" y="175" font-size="12" font-weight="600" fill="#B07C1E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">25,5%</text>
+<text x="0" y="200" font-size="12.5" font-weight="500" fill="#0B2239">Fintech y Billeteras</text>
+<rect x="0" y="206" width="242.0" height="16" fill="#B07C1E"/>
+<text x="250,0" y="219" font-size="12" font-weight="600" fill="#B07C1E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">20,2%</text>
+<text x="0" y="244" font-size="12.5" font-weight="500" fill="#0B2239">Bancos Privados</text>
+<rect x="0" y="250" width="173.3" height="16" fill="#12695F"/>
+<text x="181,3" y="263" font-size="12" font-weight="600" fill="#12695F" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">14,4%</text>
+<text x="0" y="288" font-size="12.5" font-weight="500" fill="#0B2239">Bancos Provinciales</text>
+<rect x="0" y="294" width="146.0" height="16" fill="#12695F"/>
+<text x="154,0" y="307" font-size="12" font-weight="600" fill="#12695F" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">12,2%</text>
+<text x="0" y="332" font-size="12.5" font-weight="500" fill="#0B2239">Banco Nación</text>
+<rect x="0" y="338" width="96.4" height="16" fill="#12695F"/>
+<text x="104,4" y="351" font-size="12" font-weight="600" fill="#12695F" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">8,0%</text>
+<text x="0" y="376" font-size="12.5" font-weight="500" fill="#0B2239">Financieras de Marca / Prendarias</text>
+<rect x="0" y="382" width="45.1" height="16" fill="#12695F"/>
+<text x="53,1" y="395" font-size="12" font-weight="600" fill="#12695F" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">3,8%</text>
+<text x="0" y="468" font-size="10.5" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">Se excluyen fideicomisos de recupero y SGR: sus tasas no miden desempeno crediticio</text>
+</svg>

@@ -1,0 +1,25 @@
+# Microdatos del BCRA — NO subir al repositorio
+# Su descarga requiere Clave Fiscal nivel 3 y la firma de una declaracion jurada
+# de no divulgacion de informacion personal. Contienen CUIT y razon social de
+# personas humanas: publicarlos infringiria esa declaracion y la Ley 25.326.
+*.7z
+*.7Z
+deudores.zip
+deudores.txt
+Nomdeu.txt
+Maeent.txt
+Fecha_Proceso_*.txt
+
+# Salidas intermedias del procesamiento
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db

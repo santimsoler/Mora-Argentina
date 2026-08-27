@@ -1,0 +1,6 @@
+denominador,base,morosos,tasa_pct,fuente
+Registros deudor-entidad,40837262,10039067,24.58,Central de Deudores
+CUIT unicos (humanas + sociedades),21217101,5918384,27.89,Central de Deudores
+Personas humanas registradas,20931957,5875113,28.07,Central de Deudores
+Sociedades registradas,285144,43271,15.18,Central de Deudores
+Poblacion adulta 18+,34970989,5875113,16.8,INDEC - proyecciones Censo 2022
