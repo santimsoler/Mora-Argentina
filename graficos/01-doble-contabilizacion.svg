@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" font-family="Helvetica, Arial, sans-serif"><rect width="760" height="210" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" font-family="Helvetica, Arial, sans-serif">
+<rect width="760" height="210" fill="#FFFFFF"/>
 <text x="0" y="22" font-size="17" font-weight="700" fill="#0B2239">Diez millones de registros, seis millones de personas</text>
-<text x="0" y="42" font-size="11.5" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">Situacion irregular (3, 4 y 5) — junio 2026</text>
+<text x="0" y="42" font-size="11.5" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">Situacion irregular (3, 4 y 5) — agosto 2026</text>
 <text x="0" y="80" font-size="12.5" fill="#0B2239">Registros deudor-entidad en mora</text>
 <rect x="0" y="88" width="600" height="30" fill="#A33B22" opacity="0.28"/>
 <rect x="0" y="88" width="600" height="30" fill="none" stroke="#A33B22" stroke-width="1.5"/>
-<text x="610" y="108" font-size="12.5" font-weight="600" fill="#A33B22" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">10.039.067</text>
+<text x="610" y="108" font-size="12.5" font-weight="600" fill="#A33B22" font-family="'IBM Plex Mono'. 'DejaVu Sans Mono'. monospace">10.291.348</text>
 <text x="0" y="148" font-size="12.5" fill="#0B2239">Personas humanas unicas en mora</text>
-<rect x="0" y="156" width="351" height="30" fill="#12695F"/>
-<text x="361" y="176" font-size="12.5" font-weight="600" fill="#12695F" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">5.875.113</text>
-<line x1="351" y1="84" x2="351" y2="192" stroke="#0B2239" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="0" y="156" width="348" height="30" fill="#12695F"/>
+<text x="358" y="176" font-size="12.5" font-weight="600" fill="#12695F" font-family="'IBM Plex Mono'. 'DejaVu Sans Mono'. monospace">5.967.952</text>
+<line x1="348" y1="84" x2="348" y2="192" stroke="#0B2239" stroke-width="1" stroke-dasharray="3 3"/>
 <text x="0" y="202" font-size="10.5" fill="#5C6E7E" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace">La diferencia son personas contadas una vez por cada entidad a la que le deben</text>
 </svg>
