@@ -10,9 +10,9 @@ descarga exige firmar una **declaración jurada de no divulgación de informaci�
 personal**. Publicarlos infringiría esa declaración y la normativa de protección
 de datos personales.
 
-Por eso el `.gitignore` excluye explícitamente `deudores.zip`, `deudores.txt`,
-`Maeent.txt`, `Nomdeu.txt` y los archivos `.7z` originales. **Verificá que esa
-exclusión siga vigente antes de cada commit.**
+Por eso el `.gitignore` excluye explícitamente `*.7z`, `deudores.zip`,
+`deudores.txt`, `Maeent.txt`, `Nomdeu.txt` y los `.pkl` intermedios.
+**Verificá que esa exclusión siga vigente antes de cada commit.**
 
 Lo que sí se publica son los **agregados por entidad**, que no permiten
 identificar a ninguna persona.
@@ -23,8 +23,8 @@ identificar a ninguna persona.
 2. Acceder al sitio del BCRA y solicitar el alta para microdatos de la Central
    de Deudores del Sistema Financiero.
 3. Firmar la declaración jurada de no divulgación de información personal.
-4. Descargar el archivo correspondiente al período de interés. Se publica
-   mensualmente, con nomenclatura `AAAAMM` — para este trabajo, `202606`.
+4. Descargar el archivo del período de interés. Se publica mensualmente, con
+   nomenclatura `AAAAMMDEUDORES.7Z`.
 
 El procedimiento y la ubicación exacta del formulario cambian con el tiempo;
 conviene verificarlos en el sitio del BCRA al momento de la descarga.
@@ -35,38 +35,62 @@ conviene verificarlos en el sitio del BCRA al momento de la descarga.
 |---|---|
 | `deudores.txt` | Base principal, ancho fijo. ~7 GB descomprimido |
 | `Maeent.txt` | Maestro de entidades: código y razón social. **Codificado en latin-1** |
-| `Nomdeu.txt` | Nomenclatura |
+| `Nomdeu.txt` | Nomenclatura de deudores no empadronados |
 | `LEAME DEUDORES.pdf` | Instructivo con el layout completo y las definiciones |
 | `Fecha_Proceso_AAAAMMDD.txt` | Fecha de proceso |
 
 El instructivo `LEAME DEUDORES.pdf` es la referencia autorizada para el layout
 y para saber qué campos son *no aplicables* según el tipo de entidad informante.
 
-## Descompresión
+## No hace falta descomprimirlo
 
-El archivo original viene en formato `.7z`. En Linux:
+Los scripts leen `deudores.txt` **en streaming desde el `.7z`** usando
+`libarchive`, así que no es necesario escribir los 7 GB a disco:
+
+```bash
+python scripts/00_extraer_maestro.py /ruta/202608DEUDORES.7Z maestro.pkl
+python scripts/01_procesar_mes.py    /ruta/202608DEUDORES.7Z d08.pkl
+```
+
+Si preferís descomprimirlo de todos modos:
 
 ```bash
 sudo apt install p7zip-full
-7z x 202606DEUDORES.7Z
+7z x 202608DEUDORES.7Z
 ```
 
-Los scripts de este repositorio leen directamente desde un `.zip` sin
-descomprimir, para evitar escribir 7 GB en disco.
+## Agregar un mes nuevo a la serie
+
+```bash
+# 1. maestro actualizado (el padron cambia mes a mes)
+python scripts/00_extraer_maestro.py /ruta/202609DEUDORES.7Z m09.pkl
+
+# 2. procesar el mes
+python scripts/01_procesar_mes.py /ruta/202609DEUDORES.7Z d09.pkl
+
+# 3. reclasificar incluyendo el mes nuevo, en orden cronologico
+python scripts/02_clasificar_entidades.py maestro.pkl d06.pkl d07.pkl d08.pkl d09.pkl
+
+# 4. regenerar CSV y graficos
+python scripts/03_generar_salidas.py
+python scripts/04_generar_graficos.py
+```
+
+El paso 3 debe recibir los meses **en orden cronológico**: la categoría de cada
+entidad se fija con el primero en que aparece.
 
 ## Verificación
 
-Al procesar `202606` los scripts deberían reproducir estos totales:
+Al procesar los meses de 2026 los scripts deberían reproducir estos totales:
 
 ```
-Registros procesados        40.837.262
-Personas únicas             21.217.101
-Registros en mora           10.039.067
-Personas únicas en mora      5.918.384
-Factor de sobreconteo             1,70x
-Tasa de mora s/ personas         27,9%
-Tasa de mora s/ monto             9,7%
-Entidades                           541
+                            junio         julio        agosto
+Registros              40.848.459    41.055.292    41.518.574
+Personas humanas       20.932.724    21.034.369    21.181.595
+   en mora              5.875.113     5.940.912     5.967.952
+   tasa                    28,07%        28,24%        28,18%
+Mora s/ monto (hogares)   15,55%        15,78%        15,79%
+Entidades                     540           526           519
 ```
 
 Si los números no coinciden, revisar primero el encoding del maestro de
