@@ -4,14 +4,17 @@
 # personas humanas: publicarlos infringiria esa declaracion y la Ley 25.326.
 *.7z
 *.7Z
+*DEUDORES*
 deudores.zip
 deudores.txt
 Nomdeu.txt
 Maeent.txt
 Fecha_Proceso_*.txt
+LEAME*.pdf
 
 # Salidas intermedias del procesamiento
 *.pkl
+*.npy
 
 # Python
 __pycache__/
